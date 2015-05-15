@@ -1,4 +1,9 @@
 *.class
+/bin/
+/art/
+/.classpath
+/.project
+/.settings/org.eclipse.jdt.core.prefs
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
