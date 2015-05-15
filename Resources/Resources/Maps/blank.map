@@ -1,6 +1,6 @@
 # This file includes the template for a blank chunk, used for figuring out formatting and also for future reference
 
-chunk:untitled,n,n,n,n,n,n
+chunk:ID,northID,eastID,southID,westID,upID,downID
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
