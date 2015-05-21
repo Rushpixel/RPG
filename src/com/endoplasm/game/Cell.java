@@ -20,5 +20,10 @@ public class Cell {
 	public void render(float x, float y, float z){
 		if(entity != null) entity.render(x, y, z);
 	}
+	
+	public void unload(){
+		entity.unload();
+		detail.unload();
+	}
 
 }

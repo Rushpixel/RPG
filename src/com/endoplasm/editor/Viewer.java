@@ -49,14 +49,43 @@ public class Viewer {
 			rotation = 180;
 		}
 		
-		pos = new Vertex3i(Math.round(posFloat.getX()), Math.round(posFloat.getY()), Math.round(posFloat.getZ()));
-		if(pos.getX() >= 8){
-			// check if the cell the viewer is in is in a valid chunk, else move back a cell
+		if(posFloat.getX() > 1){
+			posFloat.setX(posFloat.getX() - 1);
+			pos.addX(1);
+			//move
+		}
+		if(posFloat.getX() < 0){
+			posFloat.setX(posFloat.getX() + 1);
+			pos.addX(-1);
+			//move
+		}
+		if(posFloat.getY() > 1){
+			posFloat.setY(posFloat.getY() - 1);
+			pos.addY(1);
+			//move
+		}
+		if(posFloat.getY() < 0){
+			posFloat.setY(posFloat.getY() + 1);
+			pos.addY(-1);
+			//move
+		}
+		if(posFloat.getZ() > 1){
+			posFloat.setZ(posFloat.getZ() - 1);
+			pos.addZ(1);
+			//move
+		}
+		if(posFloat.getZ() < 0){
+			posFloat.setZ(posFloat.getZ() + 1);
+			pos.addZ(-1);
+			//move
 		}
 		
 		float scale = Endogen.WIDTH / 32f;
-		Endogen.camera.setPos1(new Vertex3f(MathUtil.getXSpeed(rotation, 300) + posFloat.getX()*scale, MathUtil.getYSpeed(rotation, 300) + posFloat.getY()*scale,300 + posFloat.getZ()*scale));
-		Endogen.camera.setPos2(new Vertex3f(posFloat.getX()*scale, posFloat.getY()*scale, posFloat.getZ()*scale));
+		float x = (pos.getX() + posFloat.getX())*scale;
+		float y = (pos.getY() + posFloat.getY())*scale;
+		float z = (pos.getZ() + posFloat.getZ())*scale;
+		Endogen.camera.setPos1(new Vertex3f(MathUtil.getXSpeed(rotation, 300) + x, MathUtil.getYSpeed(rotation, 300) + y, 300 + z));
+		Endogen.camera.setPos2(new Vertex3f(x, y, z));
 	}
 	
 	public static void render(){
