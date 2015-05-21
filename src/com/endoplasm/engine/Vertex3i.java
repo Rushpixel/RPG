@@ -39,4 +39,16 @@ private int[] value = new int[3];
 		value[2] = z;
 	}
 	
+	public void addX(int x){
+		value[0] += x;
+	}
+	
+	public void addY(int y){
+		value[1] += y;
+	}
+	
+	public void addZ(int z){
+		value[2] += z;
+	}
+	
 }

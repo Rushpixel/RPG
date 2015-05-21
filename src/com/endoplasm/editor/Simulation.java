@@ -14,15 +14,12 @@ import com.endoplasm.game.*;
 public class Simulation extends GInit{
 	
 	public static final Assets Assets = new Assets(null);
-	
-	public Chunk chunk;
 
 	@Override
 	public void init() {
 		Display.setTitle("Level Editor v0");
 		Assets.load();
 		ChunkLoader.preLoad("/Resources/Maps/blank.map");
-		chunk = new Chunk("untitled");
 	}
 
 	@Override
@@ -34,7 +31,6 @@ public class Simulation extends GInit{
 	@Override
 	public void update() {
 		Viewer.update();
-		chunk.update();
 	}
 
 	@Override
@@ -43,7 +39,6 @@ public class Simulation extends GInit{
 		float scale = Endogen.WIDTH / 32f;
 		GL11.glScalef(scale, scale, scale);
 		Viewer.render();
-		chunk.render(0,0,0);
 		GL11.glPopMatrix();
 	}
 
