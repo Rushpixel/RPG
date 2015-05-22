@@ -13,7 +13,7 @@ public class ChunkLoader implements Runnable{
 	public final static String chunkEnd = "chunkEnd";
 	public static final int LOADRANGE = 5;
 
-	// format ID:lineNum
+	// format ID:lineNum:northID:eastID:southID:westID:upID:downID
 	public static ArrayList<String> HASH = new ArrayList<String>();
 	public static String File;
 	
@@ -35,8 +35,9 @@ public class ChunkLoader implements Runnable{
 			String line;
 			while ((line = reader.readLine()) != null) {
 				if(line.startsWith(chunkStart)){
-					String chunkID = line.split(":")[1].split(",")[0];
-					HASH.add(chunkID + ":" + reader.getLineNumber());
+					String[] bits = line.split(":")[1].split(",");
+					String chunkID = bits[0];
+					HASH.add(chunkID + ":" + reader.getLineNumber() + bits[1] + bits[2] + bits[3] + bits[4] + bits[5] + bits[6]);
 					System.out.println(chunkID + ":" + reader.getLineNumber());
 				}
 			}
@@ -116,9 +117,6 @@ public class ChunkLoader implements Runnable{
 			String line;
 			int ColumnNum = 0;
 			while ((line = reader.readLine()) != null) {
-				if(line.startsWith("chunk:")){
-					
-				}
 				if(line.startsWith("RC")){
 					loadRow(ColumnNum, line);
 					ColumnNum++;
