@@ -1,6 +1,7 @@
 # This file includes the template for a blank chunk, used for figuring out formatting and also for future reference
 
 chunk:ID,northID,eastID,southID,westID,upID,downID
+stamps:metadata
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
@@ -62,7 +63,7 @@ RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
-RC<:>,<:>,<:>,<:>,<:>,<BGrass:>,<BGrass:>,<BGrass:>
 RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
-RC<:>,<:>,<:>,<:>,<BGrass:>,<:>,<:>,<:>
+RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
+RC<:>,<:>,<:>,<:>,<:>,<:>,<:>,<:>
 endChunk

@@ -10,6 +10,9 @@ varying vec4 pointColor;
 // SHADERMODE 1 - multiply output by ambience color
 
 void main() {
+	if(texture2D(texture1, gl_TexCoord[0].st).a == 0.0) discard;
+	
+	
 		if(SHADERMODE == 0){ // case normal / diffuse mode / external lighting mode
     		gl_FragColor = texture2D(texture1, gl_TexCoord[0].st) * pointColor;
     }

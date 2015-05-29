@@ -77,4 +77,21 @@ public class VectorMath {
 		return new Vertex3f(a.getX() * b.getX(), a.getY() * b.getY(), a.getZ() * b.getZ());
 	}
 
+	public static Vertex3i subtract(Vertex3i a, Vertex3i b){
+		return new Vertex3i(a.getX() - b.getX(), a.getY() - b.getY(), a.getZ() - b.getZ());
+	}
+	
+	public static Vertex3i add(Vertex3i a, Vertex3i b){
+		return new Vertex3i(a.getX() + b.getX(), a.getY() + b.getY(), a.getZ() + b.getZ());
+	}
+	
+	public static Vertex3i divide(Vertex3i a, Vertex3i b){
+		return new Vertex3i(a.getX() / b.getX(), a.getY() / b.getY(), a.getZ() / b.getZ());
+	}
+	
+	public static Vertex3i multiply(Vertex3i a, Vertex3i b){
+		return new Vertex3i(a.getX() * b.getX(), a.getY() * b.getY(), a.getZ() * b.getZ());
+	}
+
+	
 }

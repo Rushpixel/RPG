@@ -7,11 +7,13 @@ import com.endoplasm.engine.TextureAsset;
 	public class Assets extends AssetNodeGroup{
 		
 		public TextureAsset CHARACTERSHEET = new TextureAsset(this, "/Resources/Textures/charactersheet");
+		public TextureAsset SELECTION = new TextureAsset(this, "/Resources/Textures/selection");
 
 		public Assets(AssetNode PARENT) {
 			super(PARENT);
 			INDEX = new AssetNode[]{
-					CHARACTERSHEET
+					CHARACTERSHEET,
+					SELECTION
 			};
 		}
 
